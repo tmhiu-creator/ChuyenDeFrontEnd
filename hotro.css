@@ -1,0 +1,17 @@
+.navbar-nav .nav-item.active .nav-link {
+    /* Đảm bảo chữ sáng màu vàng */
+    color: gold !important;
+
+    /* 1. Xóa gạch chân mặc định */
+    text-decoration: none;
+
+    /* 2. Thiết lập hiển thị inline-block để có thể sử dụng padding/margin */
+    display: inline-block;
+
+    /* 3. Tạo khoảng trống 10px dưới chữ */
+    padding-bottom: 5px;
+
+    /* 4. Tạo đường gạch chân bằng border-bottom */
+    border-bottom: 1px solid gold;
+    /* Độ dày 2px và màu vàng */
+}

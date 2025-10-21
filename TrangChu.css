@@ -1,0 +1,612 @@
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 1. Logo To Hơn */
+.navbar-brand img {
+  width: 70px;
+  height: auto;
+}
+
+
+/* 3. Carousel Banner thành Background */
+#carouselExampleIndicators {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* --- BỔ SUNG: Responsive cho Carousel Banner #carouselExampleIndicators --- */
+@media (max-width: 768px) {
+
+  /* Điều chỉnh chiều cao cho Carousel Banner trên Mobile */
+  #carouselExampleIndicators {
+    /* Giảm chiều cao từ 100vh xuống 60vh hoặc 70vh để không chiếm toàn màn hình */
+    height: 20vh;
+  }
+
+  /* ... */
+}
+
+/* 2. Chữ trên Navbar có khoảng cách xa nhau */
+.navbar-nav .nav-item {
+  margin-right: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    padding: 5px 0;
+  }
+}
+
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  /* Cố định navbar ở trên cùng */
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  /* Đảm bảo navbar luôn nằm trên các nội dung khác */
+  background-color: transparent;
+  /* Nền trong suốt ban đầu */
+  transition: background-color 0.6s ease, box-shadow 0.6s ease;
+  /* padding: 10px; */
+  /* Khoảng đệm lớn hơn cho navbar ban đầu */
+}
+
+.navbar.scrolled {
+  background-color: #0066ffaf !important;
+  /* Màu xanh dương khi cuộn */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .ms-auto a {
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-link:hover {
+  color: yellow !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: white !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  /* Đảm bảo chữ sáng màu vàng */
+  color: gold !important;
+
+  /* 1. Xóa gạch chân mặc định */
+  text-decoration: none;
+
+  /* 2. Thiết lập hiển thị inline-block để có thể sử dụng padding/margin */
+  display: inline-block;
+
+  /* 3. Tạo khoảng trống 10px dưới chữ */
+  padding-bottom: 5px;
+
+  /* 4. Tạo đường gạch chân bằng border-bottom */
+  border-bottom: 1px solid gold;
+  /* Độ dày 2px và màu vàng */
+}
+
+
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  color: white;
+  z-index: 3;
+}
+
+.carousel-indicators [data-slide-to] {
+  background-color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+
+/* Thao tác với Search Bar */
+.search-bar {
+  top: 80%;
+  position: absolute;
+  z-index: 1040;
+}
+
+.search-bar button {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Thao tác với các Section */
+.section-below-search {
+  margin-top: 50px;
+}
+
+.left-box {
+  background-color: #ffc107;
+  border-radius: 10px 0 0 10px;
+}
+
+.right-box {
+  background-color: #275396;
+  color: white;
+  border-radius: 10px !important;
+  padding: 20px;
+}
+
+.right-box .carousel-inner {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.right-box .carousel-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 2s ease-in-out;
+}
+
+article {
+  background-color: #5544d6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+article h2 {
+  font-size: 1.8rem;
+}
+
+article .bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contentCarousel .carousel-control-prev,
+#contentCarousel .carousel-control-next {
+  top: 0px;
+  bottom: auto;
+  width: 5%;
+}
+
+#contentCarousel .carousel-control-prev-icon,
+#contentCarousel .carousel-control-next-icon {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+:root {
+  --primary: #1f4f88;
+  --accent: #2b7cbf;
+  --box-bg: #fdfefe;
+  --box-border: #dbe6f1;
+  --text: #1d3a5a;
+  --muted: #444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7faff;
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.acc-item {
+  background: var(--box-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.acc-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.chev {
+  width: 20px;
+  height: 20px;
+  transition: transform .25s;
+  flex-shrink: 0;
+}
+
+.acc-item.open .chev {
+  transform: rotate(90deg);
+}
+
+.acc-body {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  display: none;
+}
+
+.acc-body ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.acc-body li {
+  margin-bottom: 6px;
+}
+
+.more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.col-12.col-lg-8 {
+  padding-left: 50px;
+  /* hoặc nhiều hơn tùy ý */
+  padding-right: 50px;
+  margin-top: auto;
+}
+
+/* Custom CSS cho phần "Lời khuyên" */
+.section-advice {
+  background-color: #375b8a;
+  /* Màu nền xanh đậm */
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.advice-container {
+  background-color: #f0f8ff;
+  /* Màu nền trắng ngà */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.main-title {
+  color: #375b8a;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.advice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .advice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advice-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.advice-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.advice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.advice-list li {
+  margin-bottom: 12px;
+}
+
+.signature {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.signature p {
+  margin: 0;
+}
+
+.signature p:first-child {
+  font-weight: 600;
+}
+
+/* Màu sắc cho từng box */
+.box-should {
+  border: 2px solid #1100ff;
+}
+
+.box-should-not {
+  border: 2px solid #ed6161;
+}
+
+.box-note {
+  border: 2px solid #ff9933;
+}
+
+/* Màu sắc của biểu tượng */
+.icon-circle-check {
+  color: #5fb3e0;
+}
+
+.icon-circle-x {
+  color: #ed6161;
+}
+
+.icon-circle-exclamation {
+  color: #ff9933;
+}
+
+
+/* Áp dụng cho cả hai carousel: #firstCarousel và #secondCarousel */
+#firstCarousel .carousel-control-prev,
+#firstCarousel .carousel-control-next,
+#secondCarousel .carousel-control-prev,
+#secondCarousel .carousel-control-next {
+  /* Đảm bảo các nút được định vị tương đối với carousel */
+  position: absolute;
+  /* Đặt vị trí top. Thử 30% để đưa chúng lên trên gần đầu nội dung hơn */
+  top: -5%;
+  /* Chiều cao của các nút (mặc định là 100%, đặt auto hoặc một giá trị nhỏ hơn) */
+  height: 30px;
+  /* Dịch chuyển chúng lên một chút */
+  transform: translateY(-50%);
+}
+
+/* Tùy chọn: Chỉnh kích thước của icon nếu cần */
+#firstCarousel .carousel-control-prev-icon,
+#firstCarousel .carousel-control-next-icon,
+#secondCarousel .carousel-control-prev-icon,
+#secondCarousel .carousel-control-next-icon {
+  width: 2rem;
+  /* Tăng kích thước icon */
+  height: 2rem;
+}
+
+
+
+.overlay-text {
+  position: absolute;
+  z-index: 10;
+
+  /* Căn giữa theo chiều ngang (đặt 2 bên trái/phải = 0) */
+  left: 0;
+  right: 0;
+
+  /* Điều chỉnh vị trí từ trên xuống */
+  top: 40%;
+  /* Bắt đầu từ 50% chiều cao của thẻ cha */
+
+  /* Dùng transform để căn giữa chính xác */
+  transform: translateY(-50%);
+
+  /* Tùy chọn: Định lại chiều rộng nếu cần */
+  width: 100%;
+}
+
+/* Đảm bảo chữ H1 bên trong có màu tương phản (nếu ảnh nền tối) */
+.overlay-text h1 {
+  color: white;
+  /* Ví dụ: đổi màu chữ sang trắng */
+  font-size: 2.5rem;
+  /* Tăng kích thước chữ nếu cần */
+  /* Loại bỏ padding mặc định nếu không muốn nó quá rộng */
+  padding: 0 10px !important;
+}
+
+.left-box {
+  background: #ffcc33;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.left-box h3 {
+  font-weight: bold;
+  color: #0044cc;
+  margin-bottom: 20px;
+}
+
+.left-box img {
+  max-width: 100%;
+  border-radius: 10px;
+
+}
+
+.card-custom {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* padding: 12px 16px; */
+  min-height: 100px;
+  /* giữ cân đối */
+  display: flex;
+  align-items: center;
+}
+
+.card-custom i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+  color: #0066ff;
+}
+
+.card-custom p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Căn giữa toàn bộ phần New Collections */
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section .container {
+  max-width: 1100px;
+  /* Giới hạn chiều rộng cho cân đối */
+  text-align: center;
+}
+
+/* Căn giữa Swiper bên trong */
+.main-swiper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Căn giữa các slide */
+.main-swiper .swiper-wrapper {
+  justify-content: center;
+}
+
+/* Căn giữa pagination (nếu có chấm tròn) */
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.icon-arrow:hover {
+  fill: #007bff;
+  width: 100%;
+}
+
+.icon-arrow-left {
+  left: 20px;
+}
+
+.icon-arrow-right {
+  right: 20px;
+}
+
+
+/* Điều chỉnh vị trí của các viên tròn trong #secondCarousel */
+#secondCarousel .carousel-indicators {
+  /* Quan trọng: Thiết lập lại vị trí so với phần tử cha */
+  position: absolute;
+
+  /* Thiết lập bottom. Giá trị âm sẽ kéo chúng ra khỏi hộp trắng và đi xuống. */
+  /* Thử nghiệm với các giá trị khác nhau như -30px hoặc -50px để đạt được vị trí mong muốn */
+  bottom: -35px;
+
+  /* Đảm bảo chúng hiển thị trên các nội dung khác nếu cần thiết */
+  z-index: 5;
+
+  /* Căn giữa */
+  left: 35%;
+  transform: translateX(-50%);
+}

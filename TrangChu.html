@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrangChu</title>
+    <!-- Link CDN bootstap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Link script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font-awsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="TrangChu.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand logo-box d-flex align-items-center" href="#">
+                <img src="img/logo.png" width="50" alt="Logo">
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="TrangChu.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hoidap.html">Hỏi Đáp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hotro.html">Hỗ Trợ</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+
+            <!-- Đăng nhập -->
+            <div class="login-box ms-auto">
+                <a href="login.html" class="text-white text-decoration-none">
+                    <i class="bi bi-person-circle"></i> Đăng Nhập
+                </a>
+            </div>
+    </nav>
+
+
+
+    <!-- Carousel Banner -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner1.png" class="d-block w-100" alt="Banner 1">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner2 (2).png" class="d-block w-100 " alt="Banner 2">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Input + Button nằm ngang -->
+    <div class="d-flex">
+        <div class="input-group">
+            <input type="text" id="dateInput" class="form-control" placeholder="Bạn muốn đặt lịch ngày nào?"
+                onfocus="this.type='date'" onblur="if(!this.value) this.type='text'">
+            <span class="input-group-text bg-white border-0">
+                <i class="bi bi-search text-secondary"></i>
+            </span>
+        </div>
+        <button class="btn btn-primary px-4 ms-2">
+            Tìm kiếm
+        </button>
+    </div>
+
+
+
+    <!-- Section -->
+    <section>
+        <div class="container section-below-search">
+            <div class="row d-flex align-items-stretch">
+
+                <!-- Ảnh bên trái cố định -->
+                <div
+                    class="col-md-6 left-box d-flex flex-column align-items-center justify-content-start text-center position-relative">
+
+                    <h2 style="color: rgb(81, 81, 247);" class="mt-5">Quyền lợi <br>
+                        của người hiến máu:</h2>
+
+                    <div class="overlay-text">
+                        <h1 class="p-5">Người hiến máu tình nguyện sẽ được những quyền lợi sau:</h1>
+                    </div>
+
+                    <img src="img/hienmau.png" width="100%" alt="">
+                </div>
+
+                <!-- Carousel nội dung bên phải -->
+                <div class="col-md-6 right-box p-5">
+                    <div id="firstCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="4000">
+
+                        <!-- Indicators (các viên tròn) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+
+                        <!-- Nội dung -->
+                        <div class="carousel-inner p-4">
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <h3 class="fw-bold">Được bồi dưỡng trực tiếp</h3>
+                                <p>1. Ăn nhẹ, nước uống tại chỗ: tương đương 30.000 đồng (1 chai trà xanh không
+                                    độ,
+                                    1 hộp
+                                    chocopie, 1 hộp bánh Goute)</p>
+                                <p>2. Hỗ trợ chi phí đi lại (bằng tiền mặt): 50.000 đồng.</p>
+                                <p>3. Nhận phần quà tặng giá trị tương đương.</p>
+                                <p class="mt-2">
+                                    100.000đ khi hiến máu 250ml <br>
+                                    150.000đ khi hiến máu 350ml <br>
+                                    180.000đ khi hiến máu 450ml
+                                </p>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <h3 class="fw-bold">Được cấp giấy chứng nhận hiến máu tự nguyện</h3>
+                                <p>1. Giấy chứng nhận được trao cho người hiến máu sau mỗi lần hiến máu tình
+                                    nguyện.
+                                </p>
+                                <p>2. Có giá trị để được truyền máu miễn phí bằng số lượng máu đã hiến...</p>
+                                <p>3. Người hiến máu cần xuất trình Giấy chứng nhận để làm cơ sở...</p>
+                                <p>4. Cơ sở y tế có trách nhiệm ký, đóng dấu, xác nhận số lượng máu...</p>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <h3 class="fw-bold">Được tư vấn về sức khoẻ</h3>
+                                <p>1. Được giải thích về quy trình hiến máu và các tai biến có thể xảy ra trong
+                                    và
+                                    sau khi
+                                    hiến máu.</p>
+                                <p>2. Được cung cấp thông tin về dấu hiệu, triệu chứng do nhiễm vi rút...</p>
+                                <p>3. Được xét nghiệm sàng lọc một số vi rút lây qua đường truyền máu...</p>
+                                <p>4. Được tư vấn hướng dẫn cách chăm sóc sức khỏe...</p>
+                                <p>5. Được bảo mật về kết quả khám lâm sàng, kết quả xét nghiệm.</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Nút điều hướng -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#firstCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Trước</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#firstCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Tiếp</span>
+                        </button>
+                    </div>
+                </div>
+    </section>
+
+    <!-- article -->
+    <!-- Tiêu chuẩn tham gia hiến máu -->
+
+    <article class="mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div
+                    class="col-12 col-lg-4 d-flex flex-column align-items-center justify-content-center bg-warning text-center rounded p-3 mb-3 mb-lg-0">
+                    <h2 class="fw-bold text-primary">Tiêu chuẩn<br>tham gia hiến máu</h2>
+                    <img src="img/Loi ich.png" class="img-fluid rounded mb-3" alt="Tiêu chuẩn hiến máu">
+                </div>
+
+                <div class="col-12 col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-person-vcard text-primary fs-3 me-2"></i>
+                                Mang theo chứng minh nhân dân/hộ chiếu
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-virus text-primary fs-3 me-2"></i>
+                                Không mắc hoặc không có hành vi nguy cơ lây HIV, viêm gan B, viêm gan
+                                C...
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-capsule-pill text-primary fs-3 me-2"></i>
+                                Không nghiện ma túy, rượu bia và các chất kích thích
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-heart-pulse text-primary fs-3 me-2"></i>
+                                Không mắc bệnh mãn tính hoặc cấp tính về tim mạch, huyết áp, hô hấp, dạ
+                                dày...
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-person-badge text-primary fs-3 me-2"></i>
+                                Cân nặng: Nam ≥ 45kg, Nữ ≥ 45kg
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-droplet-half text-primary fs-3 me-2"></i>
+                                Chỉ số huyết sắc tố (Hb) ≥120g/l (≥125g/l nếu hiến từ 350ml trở lên)
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-heart-pulse text-primary fs-3 me-2"></i>
+                                Không mắc các bệnh mãn tính hoặc cấp tính về tim mạch, huyết áp, hô hấp,
+                                dạ dày…
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-person-fill-slash text-primary fs-3 me-2"></i>
+                                Người khỏe mạnh trong độ tuổi từ đủ 18 đến 60 tuổi
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="p-3 bg-white rounded shadow-sm h-100">
+                                <i class="bi bi-calendar-event text-primary fs-3 me-2"></i>
+                                Thời gian tối thiểu giữa 2 lần hiến máu là 12 tuần đối với cả Nam và Nữ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <main class="mt-5">
+        <div class="container-fluid">
+            <div class="wrap">
+                <h1 class="title">Lưu ý quan trọng</h1>
+
+                <div class="accordion">
+                    <!-- Ai có thể tham gia -->
+                    <div class="acc-item">
+                        <button class="acc-btn">
+                            <span>Ai có thể tham gia hiến máu?</span>
+                            <svg class="chev" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="acc-body">
+                            <ul>
+                                <li>Tất cả mọi người từ 18 - 60 tuổi, thực sự tình nguyện hiến máu của mình để
+                                    cứu chữa người bệnh.</li>
+                                <li>Cân nặng ít nhất là 45kg đối với phụ nữ, nam giới. Lượng máu hiến mỗi lần
+                                    không quá 9ml/kg cân nặng và không quá 500ml mỗi lần.</li>
+                                <li>Không bị nhiễm hoặc không có các hành vi lây nhiễm HIV và các bệnh lây nhiễm
+                                    qua đường truyền máu khác.</li>
+                                <li>Thời gian giữa 2 lần hiến máu là 12 tuần đối với cả Nam và Nữ.</li>
+                                <li>Có giấy tờ tùy thân.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Ai không nên hiến máu -->
+                    <div class="acc-item">
+                        <button class="acc-btn">
+                            <span>Ai là người không nên hiến máu?</span>
+                            <svg class="chev" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="acc-body">
+                            <ul>
+                                <li>Người đã nhiễm hoặc đã thực hiện hành vi có nguy cơ nhiễm HIV, viêm gan B,
+                                    viêm gan C, và các virus lây qua đường truyền máu.</li>
+                                <li>Người có các bệnh mãn tính: tim mạch, huyết áp, hô hấp, dạ dày…</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Máu xét nghiệm gì -->
+                    <div class="acc-item">
+                        <button class="acc-btn">
+                            <span>Máu của tôi sẽ được làm những xét nghiệm gì?</span>
+                            <svg class="chev" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="acc-body">
+                            <ul>
+                                <li>Tất cả những đơn vị máu thu được sẽ được kiểm tra nhóm máu (hệ ABO, hệ Rh),
+                                    HIV, virus viêm gan B, virus viêm gan C, giang mai, sốt rét.</li>
+                                <li>Bạn sẽ được thông báo kết quả, được giữ kín và được tư vấn (miễn phí) khi
+                                    phát hiện ra các bệnh nhiễm trùng nói trên.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <a href="#">Xem thêm »</a>
+                </div>
+            </div>
+    </main>
+
+    <section class="container my-5">
+        <div class="col right-box p-5">
+            <div id="secondCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="4000">
+
+                <!-- Indicators (các viên tròn) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#secondCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#secondCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#secondCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Nội dung -->
+                <div class="carousel-inner p-4 text-center">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <h1 class="text-center mt-3" style="color: rgb(234, 255, 0);">Những lời khuyên trước và sau
+                            khi hiến
+                            máu:</h1>
+                        <div class="bg-white rounded-3 text-dark advice-box box-should ">
+
+                            <h2 class="advice-heading"><span class="icon">✔️</span> Nên:</h2>
+                            <ul class="advice-list">
+                                <li>Ăn nhẹ và uống nhiều nước (300-500ml) trước khi hiến máu.</li>
+                                <li>Để chặt miếng bông gòn cầm máu nơi kim chích 10 phút, giữ băng keo cá nhân trong 4-6
+                                    giờ.</li>
+                            </ul>
+                            <div class="signature">
+                                <p>Bác sĩ NGÔ VĂN TẤN</p>
+                                <p>Trưởng khoa Khoa Tiếp nhận hiến máu.</p>
+                                <p>Bệnh viện Truyền máu Huyết học.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="advice-box box-should-not text-dark">
+                            <h2 class="advice-heading"><span class="icon">❌</span> Không nên:</h2>
+                            <ul class="advice-list">
+                                <li>Uống sữa, rượu bia trước khi hiến máu.</li>
+                                <li>Lái xe đi xa, khuân vác, làm việc nặng hoặc luyện tập thể thao gắng sức trong ngày
+                                    lấy máu.</li>
+                            </ul>
+                            <div class="signature">
+                                <p>Bác sĩ NGÔ VĂN TẤN</p>
+                                <p>Trưởng khoa Khoa Tiếp nhận hiến máu.</p>
+                                <p>Bệnh viện Truyền máu Huyết học.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="advice-box box-note text-dark">
+                            <h2 class="advice-heading"><span class="icon">❗</span> Lưu ý:</h2>
+                            <ul class="advice-list">
+                                <li>Nếu phát hiện chảy máu tại chỗ chích: Giơ tay cao.</li>
+                                <li>Lấy tay kia ấn nhẹ vào miếng bông bằng dính.</li>
+                                <li>Liên hệ nhân viên y tế để được hỗ trợ khi cần thiết.</li>
+                            </ul>
+                            <div class="signature">
+                                <p>Bác sĩ NGÔ VĂN TẤN</p>
+                                <p>Trưởng khoa Khoa Tiếp nhận hiến máu.</p>
+                                <p>Bệnh viện Truyền máu Huyết học.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nút điều hướng -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#secondCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control" aria-hidden="true"></span>
+                    <span class="visually-hidden">Trước</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#secondCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control" aria-hidden="true"></span>
+                    <span class="visually-hidden">Tiếp</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Liên hệ -->
+                <div class="col-md-8">
+                    <h5 class="fw-bold">LIÊN HỆ</h5>
+                    <div class="row mt-3">
+                        <!-- Cột 1 -->
+                        <div class="col-md-6">
+                            <p class="fw-bold">TT Hiến Máu </p>
+                            <p><i class="bi bi-geo-alt-fill"></i> 106 Thiên Phước, Phường Tân Hòa, TP.HCM</p>
+                            <p><i class="bi bi-telephone-fill"></i> Liên hệ giờ hành chính</p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                        </div>
+
+                        <!-- Cột 2 -->
+                        <div class="col-md-6">
+                            <p class="fw-bold">Bệnh viện BTH</p>
+                            <p><i class="bi bi-geo-alt-fill"></i> 106 Thiên Phước, Phường Tân Hòa, TP.HCM</p>
+                            <p><i class="bi bi-telephone-fill"></i> Liên hệ giờ hành chính</p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hỗ trợ -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">HỖ TRỢ</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#" class="text-white text-decoration-none">Điều khoản sử dụng</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <p>Ứng dụng "Giọt máu vàng" đã có trên:</p>
+                        <a href="#"><img src="img/pngegg.png" alt="App Store" width="170"></a>
+                        <a href="#"><img src="img/Google_Play_Store_badge_EN.svg.png" alt="Google Play" width="150"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="TrangChu.js"></script>
+
+</html>

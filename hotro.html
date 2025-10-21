@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoTro</title>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="hoidap.css">
+
+</head>
+
+<body style="background: url('img/hh.jpg') no-repeat center center; background-size: cover;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand logo-box d-flex align-items-center" href="#">
+                <img src="img/logo.png" width="50" alt="Logo">
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="trangchu2.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hoidap.html">Hỏi Đáp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tintuc.html">Tin Tức</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="hotro.html">Hỗ Trợ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Đăng xuất -->
+            <div class="login-box ms-auto">
+                <a href="trangchu.html" class="text-white text-decoration-none">
+                    <i class="bi bi-person-circle"></i> Đăng Xuất
+                </a>
+            </div>
+
+    </nav>
+
+    <article>
+        <main class="py-5" style="margin-top: 80px;">
+            <div class="container">
+                <h1 class="text-center fw-bold text-primary mb-5">Điều Khoản Sử Dụng</h1>
+
+                <div class="row">
+
+                    <div class="col-lg-8 mb-4">
+                        <div class="bg-white p-4 p-md-5 rounded shadow-lg">
+                            <h3 class="text-primary mb-4 fw-bold">Tìm kiếm câu trả lời cho các thắc mắc của bạn
+                            </h3>
+
+                            <div class="input-group mb-4">
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="Nhập từ khóa tìm kiếm...">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="bi bi-search"></i> Tìm
+                                </button>
+                            </div>
+
+                            <div class="row text-center mt-5">
+                                <div class="col-md-4 mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <div class="p-3 border rounded h-100 shadow-sm bg-light">
+                                            <i class="bi bi-person-circle fs-3 text-primary"></i>
+                                            <p class="mt-2 mb-0 fw-bold">Thông tin tài khoản</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <div class="p-3 border rounded h-100 shadow-sm bg-light">
+                                            <i class="bi bi-book fs-3 text-primary"></i>
+                                            <p class="mt-2 mb-0 fw-bold">Quy trình hiến máu</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <div class="p-3 border rounded h-100 shadow-sm bg-light">
+                                            <i class="bi bi-shield-lock-fill fs-3 text-primary"></i>
+                                            <p class="mt-2 mb-0 fw-bold">Chính sách bảo mật</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <h3 class="text-primary mb-3 fw-bold">CÁC CÂU HỎI THƯỜNG GẶP</h3>
+                        <div class="accordion" id="faqAccordion">
+
+                            <div class="accordion-item mb-2 rounded shadow-sm">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Làm thế nào để đăng ký hiến máu?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Bạn có thể đăng ký hiến máu trực tiếp trên ứng dụng hoặc website bằng
+                                        cách
+                                        chọn lịch
+                                        và địa điểm phù hợp.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mb-2 rounded shadow-sm">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Cần chuẩn bị gì trước khi hiến máu?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Bạn nên ngủ đủ giấc, ăn nhẹ và tránh đồ uống có cồn trước khi hiến máu.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mb-2 rounded shadow-sm">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Tôi có thể hiến máu bao nhiêu lần một năm?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Khoảng thời gian tối thiểu giữa hai lần hiến máu toàn phần là 12 tuần
+                                        (84
+                                        ngày).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mb-2 rounded shadow-sm">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        Xác Thực Thông Tin Và Đăng Ký Sử Dụng
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Để sử dụng Dịch Vụ, Người Dùng đồng ý thực hiện đầy đủ các bước và quy định mà
+                                        Giọt Máu Vàng yêu cầu khi đăng ký Tài Khoản Người Dùng, bao gồm nhưng không giới
+                                        hạn việc nhập thông tin theo yêu cầu của Giọt Máu Vàng và việc Giọt Máu Vàng xác
+                                        thực thông tin đăng ký,...
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </article>
+
+    <!-- footer -->
+    <footer class="bg-black text-white pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Liên hệ -->
+                <div class="col-md-8">
+                    <h5 class="fw-bold">LIÊN HỆ</h5>
+                    <div class="row mt-3">
+                        <!-- Cột 1 -->
+                        <div class="col-md-6">
+                            <p class="fw-bold">TT Hiến Máu </p>
+                            <p><i class="bi bi-geo-alt-fill"></i> 106 Thiên Phước, Phường Tân Hòa, TP.HCM</p>
+                            <p><i class="bi bi-telephone-fill"></i> Liên hệ giờ hành chính</p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                        </div>
+
+                        <!-- Cột 2 -->
+                        <div class="col-md-6">
+                            <p class="fw-bold">Bệnh viện BTH</p>
+                            <p><i class="bi bi-geo-alt-fill"></i> 106 Thiên Phước, Phường Tân Hòa, TP.HCM</p>
+                            <p><i class="bi bi-telephone-fill"></i> Liên hệ giờ hành chính</p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                            <p><a href="tel:02839571342" class="text-white text-decoration-none">0123456789</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hỗ trợ -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">HỖ TRỢ</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#" class="text-white text-decoration-none">Điều khoản sử dụng</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <p>Ứng dụng "Giọt máu vàng" đã có trên:</p>
+                        <a href="#"><img src="img/pngegg.png" alt="App Store" width="170"></a>
+                        <a href="#"><img src="img/Google_Play_Store_badge_EN.svg.png" alt="Google Play" width="150"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
