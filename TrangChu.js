@@ -103,3 +103,33 @@ document.querySelectorAll('.acc-btn').forEach(btn => {
         }
     });
 });
+
+
+// TrangChu.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy tên file hiện tại (ví dụ: TrangChu.html, tintuc.html)
+    // Nếu URL là http://localhost/ thì currentPath sẽ là ""
+    const currentPath = window.location.pathname.split('/').pop().toLowerCase();
+
+    // Lấy tất cả các thẻ <a> trong menu
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').toLowerCase();
+        const navItem = link.closest('.nav-item');
+
+        // 1. Luôn xóa class 'active' trước khi kiểm tra
+        navItem.classList.remove('active');
+
+        // 2. Kiểm tra nếu link khớp với trang hiện tại
+        if (currentPath === linkPath) {
+            navItem.classList.add('active');
+        }
+        // 3. Xử lý trường hợp Trang Chủ: 
+        // Nếu đang ở URL gốc (currentPath == "") VÀ link là TrangChu.html
+        else if (currentPath === "" && linkPath === "trangchu.html") {
+            navItem.classList.add('active');
+        }
+    });
+});
