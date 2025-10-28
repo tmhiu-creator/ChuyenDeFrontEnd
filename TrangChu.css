@@ -610,3 +610,15 @@ section .container {
   left: 35%;
   transform: translateX(-50%);
 }
+
+
+
+.left-box {
+  border-radius: 10px 1px 1px 10px !important;
+  /* Ví dụ: 10px trên, 1px phải */
+}
+
+.right-box {
+  border-radius: 1px 10px 10px 1px !important;
+  /* Ví dụ: 1px trái, 10px phải */
+}
